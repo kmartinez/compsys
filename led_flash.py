@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# this example only flashes the red LED on output 13
 import RPi.GPIO as GPIO
 import os
 from time import sleep

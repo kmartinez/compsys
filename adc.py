@@ -1,9 +1,10 @@
 """
-    Provides an easy to use python interface to all the adc stuff
+    Provides an easy way to use python interface to the adc
     Assumes Raspberry Pi with MCP3008 ADC
     originally adapted by Ed Crampin from https://pimylifeup.com/raspberry-pi-adc/
     2018 adaption By Laurie Kirkcaldy
     principle is the ADC channel  number is sent and the two bytes of reading received and decoded
+DO NOT TRY TO RUN THIS ON ITS OWN
 """
 
 import spidev

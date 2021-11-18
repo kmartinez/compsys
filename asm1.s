@@ -4,7 +4,7 @@
 .text
 .global main
 main:
-	ldr r0, =5
+	mov r0, #5
 	mov r1, #4
 	add r0, r0, r1
 	bx lr

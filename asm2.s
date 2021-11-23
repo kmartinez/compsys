@@ -6,7 +6,7 @@
 
 .data
     .balign  4
-    .fmtstring: .asciz "%d\n"
+    fmtstring: .asciz "%d\n"
 .text
     .global main
     .extern printf

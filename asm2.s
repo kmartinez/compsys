@@ -2,7 +2,6 @@
 # adding up the counter from 1 to 5
 # return value to shell for printing with echo $?
 @ comp1203 template code
-@ shows how to print an integer with printf
 
 .data
     .balign  4
@@ -13,7 +12,7 @@
 
 main:
 push {lr}			@ save link register as we will re-use it here
-	@ our code here
+@ our code here
     mov r1, #0       /* r1 ← 0 is our sum */
     mov r2, #1       /* r2 ← 1  our counter */
 loop: 

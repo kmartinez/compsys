@@ -1,6 +1,5 @@
 @ comp1203 template code
 @ shows how to print an integer with printf
-
 .data
         .balign  4
 	fmtstring: .asciz "%d\n"

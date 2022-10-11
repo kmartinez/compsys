@@ -1,4 +1,4 @@
-#!/usr/bin/env python  
+#!/usr/bin/env python3  
 #
 # use thermistor+8k2ohm on adc, when warm light up red LED, else green
 # ain(1) is CH2 on pin 2 of the MCP3008
@@ -21,7 +21,7 @@ try:
     while True:
         t = adc.get_ain(1)
 
-        print t
+        print( t )
         if t > 800 :
             GPIO.output(RED,GPIO.LOW)
             GPIO.output(GREEN,GPIO.HIGH)

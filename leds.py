@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# flash LEDs in sequence
+# flash three LEDs in sequence
 # Red = GPIO 13
 # Orange/Blue = GPIO 19
 # Green = GPIO 26 
@@ -17,7 +17,6 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(RED, GPIO.OUT)
 GPIO.setup(ORANGE, GPIO.OUT)
 GPIO.setup(GREEN, GPIO.OUT)
-
 
 try:
     while True:

@@ -9,7 +9,6 @@ DO NOT TRY TO RUN THIS ON ITS OWN
 
 import spidev
 
-
 spi = spidev.SpiDev()
 spi.open(0,0)
 spi.max_speed_hz=400000
@@ -20,4 +19,3 @@ def get_ain(adcnum):
         r = spi.xfer2([1,(8+adcnum)<<4,0])
         data = ((r[1]&3) << 8) + r[2]
         return data
-        

@@ -1,6 +1,8 @@
-/* simple code to do a lot of arithmetic loops
-* about 11 instr per loop on an ARM Cortex A53
-* when compiled with gcc -O
+/* simple code to do one billion arithmetic/logic loops
+* about 11 instructions per loop on an ARM Cortex A53/72
+* when compiled with gcc -O -o busycpu busycpu.c
+* you can look at the assembler with gcc -S -O busycpu.c which makes busycpu.s
+* time your run and calculate billions of Instructions Per Second
 */
 #include <stdio.h>
 #define NUM 1000000000

@@ -7,7 +7,7 @@
 
 import RPi.GPIO as GPIO
 from time import sleep
-
+GPIO.setwarnings(False)
 RED = 13
 ORANGE = 19
 GREEN = 26
@@ -29,7 +29,7 @@ try:
         GPIO.output(GREEN,GPIO.HIGH)
         sleep(ontime)
         GPIO.output(GREEN,GPIO.LOW)
-
+        sleep(ontime)
 # this catches when you stop the program
 except KeyboardInterrupt:
     GPIO.cleanup()

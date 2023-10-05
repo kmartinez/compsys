@@ -1,6 +1,6 @@
 #!/usr/bin/env python3  
 #
-# use thermistor+8k2ohm on adc, when warm light up red LED, else green
+# use thermistor + 8k2ohm resistor to GND, mid point to adc, when warm light up red LED, else green
 # ain(1) is CH2 on pin 2 of the MCP3008
 # threshold has to be chosen by experiment
 
@@ -9,12 +9,10 @@ import RPi.GPIO as GPIO
 from time import sleep
 
 RED = 13
-ORANGE = 19
 GREEN = 26
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(RED, GPIO.OUT)
-GPIO.setup(ORANGE, GPIO.OUT)
 GPIO.setup(GREEN, GPIO.OUT)
 
 try:

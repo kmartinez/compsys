@@ -2,7 +2,7 @@
 from sys import argv
 from serial import Serial
 from time import sleep
-
+# you can change this value to a binary number you know or run at command line
 DEFAULT_STRING = "A"
 PORT = "/dev/serial0"
 BAUD = 9600
@@ -17,6 +17,6 @@ try:
     SERIAL_PORT = Serial(PORT, BAUD, timeout=0.1)
     while True:
         SERIAL_PORT.write(outstr)
-        sleep(0.5)
+        sleep(0.1)
 except KeyboardInterrupt:
     SERIAL_PORT.close()

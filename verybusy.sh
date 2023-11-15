@@ -4,3 +4,4 @@ time ./busycpu &
 time ./busycpu &
 time ./busycpu &
 wait
+echo "completed all four tasks"

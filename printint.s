@@ -1,5 +1,8 @@
 @ comp1203 template code
 @ shows how to print an integer with printf
+@ which uses r0 for its format string and r1 as the parameter we're printing
+@ note we stash link register lr with push
+@ as printf will reuse lr to get back to our code after our 
 .data
         .balign  4
 	fmtstring: .asciz "%d\n"
@@ -10,10 +13,10 @@
 main:
 push {lr}			@ save link register as we will re-use it here
 	@ our code here
-	ldr r1, =1000000
-	mov r0, #2
-        mul     r0, r0, r1
-	@ end of our code
+	ldr r3, =1000000
+	mov r2, #2
+        mul r1, r2, r3
+	
 	@ print the result that we have stored in r0 - don't change any code below
 	mov r1, r0		
 	ldr r0, =fmtstring

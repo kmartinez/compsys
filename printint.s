@@ -17,8 +17,7 @@ push {lr}			@ save link register as we will re-use it here
 	mov r2, #2
         mul r1, r2, r3
 	
-	@ print the result that we have stored in r0 - don't change any code below
-	mov r1, r0		
+	@ print the result that we have stored in r1 - don't change any code below	
 	ldr r0, =fmtstring
 	bl printf
 

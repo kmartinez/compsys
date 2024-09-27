@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #
-# turn on the red LED when the switch is pressed
+# turn on the red LED when the switch is pressed and off when released
 # put switch as shown in the lab diagram
 # 
 # Switch = GPIO 21
@@ -15,14 +15,13 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(LED, GPIO.OUT)
 GPIO.setup(SWITCH, GPIO.IN)
 
-
 try:
     while True:
         sw = GPIO.input(SWITCH)
         if sw :
-            GPIO.output(LED, GPIO.HIGH)
+            #insert your code here to turn led on
         else:
-            GPIO.output(LED, GPIO.LOW)
+            #insert your code here to turn led off
 
 # this catches when you stop the program
 except KeyboardInterrupt:

@@ -1,7 +1,7 @@
 # a simple loop
 # adding up the counter from 1 to 5
 # print takes two args: r0 (format) and r1 (the value you want to print)
-# comp1203 template code
+# computer systems template code
 
 .data
 .balign  4

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# simple web server on a Pi demo for comp1203
+# simple web server on a Pi demo for computer systems
 # requires Bottle
 from bottle import route, run
 import RPi.GPIO as GPIO
@@ -12,7 +12,7 @@ import os
 # or on the Pi's web browser at http://localhost:8080
 # makes these resources:
 # /ledflash  - flashes red led
-# /hello  - says hello world and arg if given like /hello/kirk
+# /hello  - says hello world and arg if given like /hello/kermit
 # /adc    - adc reading of channel 0
 # /cputemp - temperature of CPU
 LED = 13

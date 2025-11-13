@@ -1,14 +1,14 @@
-@ comp1203 template code
+@ computer systems module template code (32 bit)
 @ shows how to print an integer with printf
 @ which uses r0 for its format string and r1 as the parameter we're printing
 @ note we stash link register lr with push
 @ as printf will reuse lr to get back to our code after our 
 .data
-        .balign  4
-	fmtstring: .asciz "%d\n"
+.balign  4
+fmtstring: .asciz "%d\n"
 .text
-        .global main
-	.extern printf
+.global main
+.extern printf
 
 main:
 push {lr}			@ save link register as we will re-use it here
@@ -23,3 +23,4 @@ push {lr}			@ save link register as we will re-use it here
 
 pop {lr}			@ get original values for return to shell
 bx lr
+
